@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 沖繩雙家庭親子自駕遊</title>
+    <!-- 引入 Tailwind 用於美化，但核心功能將使用內建 CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap');
+        
+        /* 核心防呆樣式：確保就算外部 CSS 沒載入，隱藏功能也能運作 */
+        .day-content.hidden {
+            display: none !important;
+        }
+        
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f0f7ff;
+        }
+        .day-tab.active {
+            background-color: #3b82f6 !important;
+            color: white !important;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .map-link:hover {
+            text-decoration: underline;
+        }
+        /* 讓導覽列在小螢幕上可以滑動 */
+        nav {
+            -webkit-overflow-scrolling: touch;
+        }
+    </style>
+</head>
+<body class="min-h-screen pb-12">
+
+    <!-- Header -->
+    <header class="bg-blue-600 text-white py-8 px-4 shadow-lg text-center">
+        <h1 class="text-2xl md:text-3xl font-bold mb-2">🗓️ 2026 沖繩 7天6夜</h1>
+        <p class="text-blue-100 italic">雙家庭親子自駕全攻略 (4大3小)</p>
+    </header>
+
+    <!-- Day Navigation -->
+    <nav class="sticky top-0 bg-white shadow-md z-50 overflow-x-auto whitespace-nowrap py-3 px-2 flex justify-start md:justify-center gap-2">
+        <button onclick="showDay(1)" id="tab-1" class="day-tab active px-4 py-2 rounded-full font-medium transition-all border border-blue-200">Day 1</button>
+        <button onclick="showDay(2)" id="tab-2" class="day-tab px-4 py-2 rounded-full font-medium transition-all border border-blue-200">Day 2</button>
+        <button onclick="showDay(3)" id="tab-3" class="day-tab px-4 py-2 rounded-full font-medium transition-all border border-blue-200">Day 3</button>
+        <button onclick="showDay(4)" id="tab-4" class="day-tab px-4 py-2 rounded-full font-medium transition-all border border-blue-200">Day 4</button>
+        <button onclick="showDay(5)" id="tab-5" class="day-tab px-4 py-2 rounded-full font-medium transition-all border border-blue-200">Day 5</button>
+        <button onclick="showDay(6)" id="tab-6" class="day-tab px-4 py-2 rounded-full font-medium transition-all border border-blue-200">Day 6</button>
+        <button onclick="showDay(7)" id="tab-7" class="day-tab px-4 py-2 rounded-full font-medium transition-all border border-blue-200">Day 7</button>
+    </nav>
+
+    <main class="max-w-2xl mx-auto px-4 mt-6">
+        <!-- Day 1 -->
+        <div id="content-1" class="day-content space-y-4">
+            <h2 class="text-xl font-bold text-blue-800 mb-4 border-l-4 border-blue-500 pl-3">1/22 (四) 抵達與北上恩納</h2>
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-blue-100 space-y-4">
+                <div class="flex items-start">
+                    <span class="text-gray-400 font-mono w-16 text-sm">14:15</span>
+                    <div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=那霸機場" target="_blank" class="font-bold text-lg text-blue-600 map-link">🛫 那霸機場</a>
+                        <p class="text-sm text-gray-500">前往 1F 租車接駁區</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <span class="text-gray-400 font-mono w-16 text-sm">16:30</span>
+                    <div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=OTS+租車+臨空豐崎營業所" target="_blank" class="font-bold text-lg text-blue-600 map-link">🚗 OTS 臨空豐崎營業所</a>
+                        <p class="text-sm text-gray-500">取車出發 (MapCode: 206 127 827*55)</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <span class="text-gray-400 font-mono w-16 text-sm">17:30</span>
+                    <div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=San-A+Ishikawa+City" target="_blank" class="font-bold text-lg text-blue-600 map-link">🛒 San-A 石川 City</a>
+                        <p class="text-sm text-gray-500">超市大採購 (早餐、啤酒、零食)</p>
+                    </div>
+                </div>
+                <div class="pt-3 border-t">
+                    <p class="text-sm text-gray-400 mb-1">晚餐建議：</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Steak+House+88+恩納店" target="_blank" class="font-bold text-lg text-orange-600 map-link">🥩 Steak House 88 恩納店</a>
+                </div>
+                <div class="pt-3 border-t">
+                    <p class="text-sm text-gray-400 mb-1">入住：</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Southerlies+Condominium+Onna" target="_blank" class="font-bold text-lg text-green-600 map-link">🏠 Southerlies Condominium Onna</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 2 -->
+        <div id="content-2" class="day-content hidden space-y-4">
+            <h2 class="text-xl font-bold text-blue-800 mb-4 border-l-4 border-blue-500 pl-3">1/23 (五) 水族館與古宇利島</h2>
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-blue-100 space-y-4">
+                <div class="flex items-start">
+                    <span class="text-gray-400 font-mono w-16 text-sm">10:30</span>
+                    <div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=美麗海水族館" target="_blank" class="font-bold text-lg text-blue-600 map-link">🐋 美麗海水族館</a>
+                        <p class="text-sm text-gray-500">看鯨鯊、黑潮之海、海豚秀</p>
+                    </div>
+                </div>
+                <div class="pt-3 border-t">
+                    <p class="text-sm text-gray-400 mb-1">午餐建議：</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Okinawa+Hanasaki+Marche" target="_blank" class="font-bold text-lg text-orange-600 map-link">🍱 Hanasaki Marche 花崎市集</a>
+                </div>
+                <div class="flex items-start pt-3 border-t">
+                    <span class="text-gray-400 font-mono w-16 text-sm">15:45</span>
+                    <div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=古宇利海洋塔" target="_blank" class="font-bold text-lg text-blue-600 map-link">🗼 古宇利海洋塔</a>
+                        <p class="text-sm text-gray-500">自動駕駛遊園車、貝殼博物館</p>
+                    </div>
+                </div>
+                <div class="pt-3 border-t">
+                    <p class="text-sm text-gray-400 mb-1">晚餐建議：</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Shimabutaya+Onna" target="_blank" class="font-bold text-lg text-orange-600 map-link">🐷 島豚屋 (阿古豬蒸籠料理)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 3 -->
+        <div id="content-3" class="day-content hidden space-y-4">
+            <h2 class="text-xl font-bold text-blue-800 mb-4 border-l-4 border-blue-500 pl-3">1/24 (六) 親子放電與美國村</h2>
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-blue-100 space-y-4">
+                <div class="bg-blue-50 p-3 rounded-lg text-sm">
+                    <p class="font-bold text-blue-700">💡 上午 2 選 1：</p>
+                    <div class="mt-2 space-y-1">
+                        <a href="https://www.google.com/maps/search/?api=1&query=BIOS之丘" target="_blank" class="text-blue-600 block map-link">A. BIOS 之丘 (森林/湖泊/水牛)</a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=東南植物樂園" target="_blank" class="text-blue-600 block map-link">B. 東南植物樂園 (水豚/釣魚)</a>
+                    </div>
+                </div>
+                <div class="pt-3 border-t">
+                    <p class="text-sm text-gray-400 mb-1">午餐建議：</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Gordie's+Hamburger" target="_blank" class="font-bold text-lg text-orange-600 map-link">🍔 Gordie's Hamburger</a>
+                </div>
+                <div class="flex items-start pt-3 border-t">
+                    <span class="text-gray-400 font-mono w-16 text-sm">14:30</span>
+                    <div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=美國村" target="_blank" class="font-bold text-lg text-blue-600 map-link">🎡 美國村 American Village</a>
+                        <p class="text-sm text-gray-500">尋找寶可夢壁畫、逛雜貨</p>
+                    </div>
+                </div>
+                <div class="pt-3 border-t">
+                    <p class="text-sm text-gray-400 mb-1">晚餐建議：</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=迴轉壽司市場+美濱店" target="_blank" class="font-bold text-lg text-orange-600 map-link">🍣 迴轉壽司市場</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 4 -->
+        <div id="content-4" class="day-content hidden space-y-4">
+            <h2 class="text-xl font-bold text-blue-800 mb-4 border-l-4 border-blue-500 pl-3">1/25 (日) 南下購物與大公園</h2>
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-blue-100 space-y-4">
+                <div class="bg-blue-50 p-3 rounded-lg text-sm">
+                    <p class="font-bold text-blue-700">💡 移動日 2 選 1：</p>
+                    <div class="mt-2 space-y-1">
+                        <a href="https://www.google.com/maps/search/?api=1&query=AEON+Mall+來客夢" target="_blank" class="text-blue-600 block map-link">A. AEON Mall 來客夢 (雨天備案)</a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=殘波岬" target="_blank" class="text-blue-600 block map-link">B. Gala 青海 + 殘波岬 (晴天)</a>
+                    </div>
+                </div>
+                <div class="flex items-start pt-3 border-t">
+                    <span class="text-gray-400 font-mono w-16 text-sm">14:30</span>
+                    <div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=浦添大公園+C區" target="_blank" class="font-bold text-lg text-blue-600 map-link">🛝 浦添大公園 (C區)</a>
+                        <p class="text-sm text-gray-500">大型遊具、滾輪溜滑梯</p>
+                    </div>
+                </div>
+                <div class="pt-3 border-t">
+                    <p class="text-sm text-gray-400 mb-1">入住：</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Okinawa+Hinode+Resort+and+Hotel" target="_blank" class="font-bold text-lg text-green-600 map-link">🏨 沖繩逸之彩飯店</a>
+                    <p class="text-xs text-gray-500 mt-1">含飲料/冰淇淋/拉麵宵夜</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 5 -->
+        <div id="content-5" class="day-content hidden space-y-4">
+            <h2 class="text-xl font-bold text-blue-800 mb-4 border-l-4 border-blue-500 pl-3">1/26 (一) 波上宮與海景燒肉</h2>
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-blue-100 space-y-4">
+                <div class="flex items-start">
+                    <span class="text-gray-400 font-mono w-16 text-sm">09:30</span>
+                    <div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=波上宮" target="_blank" class="font-bold text-lg text-blue-600 map-link">⛩️ 波上宮</a>
+                        <p class="text-sm text-gray-500">那霸懸崖上的神社、波之上海灘</p>
+                    </div>
+                </div>
+                <div class="flex items-start pt-3 border-t">
+                    <span class="text-gray-400 font-mono w-16 text-sm">11:30</span>
+                    <div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=浦添+Parco+City" target="_blank" class="font-bold text-lg text-blue-600 map-link">🛍️ 浦添 Parco City</a>
+                    </div>
+                </div>
+                <div class="bg-orange-50 p-3 rounded-lg border border-orange-200">
+                    <p class="text-xs text-orange-800 font-bold mb-1">📅 13:30 已預約</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=敘敘苑+浦添ParcoCity店" target="_blank" class="font-bold text-lg text-orange-600 map-link">🥩 敘敘苑燒肉</a>
+                    <p class="text-xs text-red-600 mt-1">※ 請務必準時到達</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 6 -->
+        <div id="content-6" class="day-content hidden space-y-4">
+            <h2 class="text-xl font-bold text-blue-800 mb-4 border-l-4 border-blue-500 pl-3">1/27 (二) 南部散策與好市多</h2>
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-blue-100 space-y-4">
+                <div class="bg-blue-50 p-3 rounded-lg text-sm">
+                    <p class="font-bold text-blue-700">💡 上午 2 選 1：</p>
+                    <div class="mt-2 space-y-1">
+                        <a href="https://www.google.com/maps/search/?api=1&query=和平祈念公園" target="_blank" class="text-blue-600 block map-link">A. 和平祈念公園 (巨型跳床)</a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=瀨長島" target="_blank" class="text-blue-600 block map-link">B. 瀨長島 (看飛機/吃鬆餅)</a>
+                    </div>
+                </div>
+                <div class="flex items-start pt-3 border-t">
+                    <span class="text-gray-400 font-mono w-16 text-sm">12:30</span>
+                    <div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Costco+Nanjo" target="_blank" class="font-bold text-lg text-blue-600 map-link">🍕 Costco 好市多 (南城店)</a>
+                    </div>
+                </div>
+                <div class="flex items-start pt-3 border-t">
+                    <span class="text-gray-400 font-mono w-16 text-sm">14:30</span>
+                    <div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=DMM+水族館" target="_blank" class="font-bold text-lg text-blue-600 map-link">🐠 DMM Kariyushi 水族館</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 7 -->
+        <div id="content-7" class="day-content hidden space-y-4">
+            <h2 class="text-xl font-bold text-blue-800 mb-4 border-l-4 border-blue-500 pl-3">1/28 (三) 補貨與歸賦</h2>
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-blue-100 space-y-4">
+                <div class="flex items-start">
+                    <span class="text-gray-400 font-mono w-16 text-sm">10:00</span>
+                    <div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=AEON+那霸店" target="_blank" class="font-bold text-lg text-blue-600 map-link">📦 AEON 那霸店 (小祿站)</a>
+                    </div>
+                </div>
+                <div class="flex items-start pt-3 border-t">
+                    <span class="text-gray-400 font-mono w-16 text-sm">12:00</span>
+                    <div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=ENEOS+沖繩+豐見城" target="_blank" class="font-bold text-lg text-blue-600 map-link">⛽ 還車前加油</a>
+                    </div>
+                </div>
+                <div class="flex items-start pt-3 border-t">
+                    <span class="text-gray-400 font-mono w-16 text-sm">15:25</span>
+                    <p class="text-lg font-bold">🛫 起飛回家</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // 核心功能：切換顯示日期
+        function showDay(dayNumber) {
+            // 1. 隱藏所有內容
+            const contents = document.getElementsByClassName('day-content');
+            for (let i = 0; i < contents.length; i++) {
+                contents[i].classList.add('hidden');
+            }
+            
+            // 2. 顯示點選的內容
+            const targetContent = document.getElementById('content-' + dayNumber);
+            if (targetContent) {
+                targetContent.classList.remove('hidden');
+            }
+            
+            // 3. 更新按鈕樣式
+            const tabs = document.getElementsByClassName('day-tab');
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active');
+            }
+            document.getElementById('tab-' + dayNumber).classList.add('active');
+
+            // 4. 自動捲動回頂端，方便閱讀
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
